@@ -12,4 +12,4 @@ export const allGroups = [
   [9, '🏁', 'flags']
 ].map(([id, emoji, name]) => ({ id, emoji, name }))
 
-export const groups = allGroups.slice(1)
+export const groups = [...allGroups.slice(0, 2), ...allGroups.slice(3)]
