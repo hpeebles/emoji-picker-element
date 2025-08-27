@@ -32,4 +32,7 @@ export const FONT_FAMILY = '"Twemoji Mozilla","Apple Color Emoji","Segoe UI Emoj
   '"Noto Color Emoji","EmojiOne Color","Android Emoji",sans-serif'
 
 /* istanbul ignore next */
-export const DEFAULT_CATEGORY_SORTING = (a, b) => a < b ? -1 : a > b ? 1 : 0
+export const DEFAULT_CATEGORY_SORTING = (a, b) => {
+    const valueForSorting = (x) => x === -1 ? 2 : x;
+    return valueForSorting(a) - valueForSorting(b);
+}
